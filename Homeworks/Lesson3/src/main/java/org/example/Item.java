@@ -10,6 +10,7 @@ public class Item {
         this.name = name;
         this.article = article;
         this.quantity = quantity;
+        System.out.println("Название: " + name + ", артикул: " + article + ", количество: " + quantity );
     }
 
     public Item(String name, String article, int quantity, double price) {
@@ -17,5 +18,6 @@ public class Item {
         this.article = article;
         this.quantity = quantity;
         this.price = price;
+        System.out.println("Название: " + name + ", артикул: " + article + ", количество: " + quantity + ", цена: " + price);
     }
 }
