@@ -1,0 +1,38 @@
+package Homework5;
+
+import java.util.Objects;
+
+public class Player {
+
+    private int id;
+    private String nickname;
+    private boolean isOnline;
+
+    public Player(int id, String nickname, boolean isOnline) {
+        this.id = id;
+        this.nickname = nickname;
+        this.isOnline = isOnline;
+    }
+
+    public Player(String nickname) {
+        this.nickname = nickname;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Player player = (Player) o;
+        return id == player.id && isOnline == player.isOnline && Objects.equals(nickname, player.nickname);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, nickname, isOnline);
+    }
+
+    @Override
+    public String toString() {
+        return nickname;
+    }
+}
